@@ -24,8 +24,6 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--felt2);color:var(--white);font-family:var(--fb);overflow-x:hidden}
-
-/* ── BG ── */
 #bgCanvas{position:fixed;inset:0;z-index:0;pointer-events:none}
 .bg-felt{position:fixed;inset:0;z-index:1;pointer-events:none;
   background-image:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.03) 3px,rgba(0,0,0,0.03) 6px),
@@ -38,8 +36,6 @@ body{background:var(--felt2);color:var(--white);font-family:var(--fb);overflow-x
 .ptl{top:12px;left:12px}.ptr{top:12px;right:12px}
 .pbl{bottom:12px;left:12px}.pbr{bottom:12px;right:12px}
 nav,.hero,.sec,.footer{position:relative;z-index:10}
-
-/* ── NAV ── */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
   padding:12px 22px;background:rgba(7,31,16,0.93);
@@ -50,8 +46,6 @@ nav,.hero,.sec,.footer{position:relative;z-index:10}
 .nav-links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.76rem;
   letter-spacing:1.5px;text-transform:uppercase;transition:color .2s}
 .nav-links a:hover{color:var(--neon)}
-
-/* ── HERO ── */
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;
   padding:108px 20px 68px;text-align:center;overflow:hidden;position:relative}
 .hero::before{content:'';position:absolute;inset:0;
@@ -104,8 +98,6 @@ nav,.hero,.sec,.footer{position:relative;z-index:10}
 .cue-r{right:-65px;transform:rotate(-28deg);animation:cr 9s ease-in-out infinite 1.2s}
 @keyframes cl{0%,100%{transform:rotate(28deg);opacity:.16}50%{transform:rotate(33deg);opacity:.26}}
 @keyframes cr{0%,100%{transform:rotate(-28deg);opacity:.16}50%{transform:rotate(-33deg);opacity:.26}}
-
-/* ── SECTIONS ── */
 .sec{padding:76px 20px;max-width:1040px;margin:0 auto}
 .sec-head{text-align:center;margin-bottom:42px}
 .sec-pill{display:inline-block;padding:4px 13px;background:var(--gdim);
@@ -116,37 +108,27 @@ nav,.hero,.sec,.footer{position:relative;z-index:10}
   text-shadow:0 0 26px rgba(0,212,255,0.16)}
 .sec-sub{font-size:.8rem;color:var(--muted);letter-spacing:.7px}
 .divider{width:55px;height:2px;background:linear-gradient(90deg,transparent,var(--neon),transparent);margin:13px auto 0}
-
-/* ── HOW POINTS WORK BANNER ── */
 .pts-explainer{
   background:linear-gradient(135deg,rgba(255,215,0,0.06),rgba(255,215,0,0.02));
   border:1px solid rgba(255,215,0,0.25);border-radius:16px;
   padding:18px 22px;margin-bottom:22px;
-  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
-}
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .pe-icon{font-size:2rem;flex-shrink:0}
 .pe-text{flex:1;min-width:200px}
 .pe-title{font-family:var(--fm);font-size:.75rem;color:var(--gold);letter-spacing:2px;margin-bottom:5px}
 .pe-desc{font-size:.82rem;color:rgba(240,248,255,0.65);line-height:1.5}
-.pe-formula{
-  display:inline-block;padding:4px 12px;
+.pe-formula{display:inline-block;padding:4px 12px;
   background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.3);
   border-radius:8px;font-family:var(--fm);font-size:.78rem;color:var(--gold);
-  margin-top:8px;letter-spacing:1px;
-}
-
-/* ── COLUMN LEGEND ── */
+  margin-top:8px;letter-spacing:1px}
 .col-legend{
   display:grid;grid-template-columns:repeat(3,1fr);gap:8px 20px;
   background:rgba(0,212,255,0.03);border:1px solid rgba(0,212,255,0.12);
-  border-radius:12px;padding:14px 18px;margin-bottom:20px;
-}
+  border-radius:12px;padding:14px 18px;margin-bottom:20px}
 .cl-item{font-size:.75rem;color:var(--muted)}
 .cl-item b{color:var(--neon)}
 .cl-item.pts-col b{color:var(--gold)}
 .cl-item.loss-col b{color:var(--red)}
-
-/* ── STANDINGS TABLE ── */
 .tbl-card{background:var(--glass);backdrop-filter:blur(22px);
   border:1px solid var(--border);border-radius:18px;overflow:hidden;
   box-shadow:var(--shadow),0 0 20px rgba(0,212,255,0.08)}
@@ -180,8 +162,20 @@ nav,.hero,.sec,.footer{position:relative;z-index:10}
 .wpct-num{font-family:var(--fm);font-size:.73rem}
 .wpct-bar{width:52px;height:3px;background:rgba(255,255,255,0.07);border-radius:2px;overflow:hidden}
 .wpct-fill{height:100%;border-radius:2px;transition:width 1.4s ease;width:0}
-
-/* ── MATCH RESULTS ── */
+/* H2H TABLE */
+.h2h-section{margin-top:28px}
+.h2h-title{font-family:var(--fm);font-size:.7rem;letter-spacing:2px;color:var(--neon);
+  text-transform:uppercase;margin-bottom:14px;text-align:center}
+.h2h-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.h2h-card{background:rgba(0,212,255,0.03);border:1px solid rgba(0,212,255,0.12);
+  border-radius:12px;padding:14px 12px;text-align:center}
+.h2h-matchup{font-size:.65rem;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;margin-bottom:8px}
+.h2h-scores{display:flex;align-items:center;justify-content:center;gap:8px;font-family:var(--fm)}
+.h2h-w{font-size:1.5rem;color:var(--gold);text-shadow:0 0 8px rgba(255,215,0,0.4)}
+.h2h-sep{font-size:.9rem;color:rgba(255,255,255,0.2)}
+.h2h-l{font-size:1.5rem;color:rgba(255,255,255,0.28)}
+.h2h-names{display:flex;justify-content:space-between;font-size:.68rem;font-weight:700;margin-top:6px}
+/* RESULTS */
 .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .rcard{background:var(--glass);backdrop-filter:blur(18px);
   border:1px solid rgba(255,255,255,0.06);border-radius:var(--r);
@@ -190,9 +184,12 @@ nav,.hero,.sec,.footer{position:relative;z-index:10}
 .rcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
   background:linear-gradient(90deg,transparent,var(--neon),transparent);opacity:.35}
 .rcard:hover{transform:translateY(-5px);box-shadow:var(--shadow),0 0 18px rgba(0,212,255,0.08)}
+.rcard.today{border-color:rgba(255,107,53,0.3);box-shadow:0 0 18px rgba(255,107,53,0.08)}
+.rcard.today::before{background:linear-gradient(90deg,transparent,var(--orange),transparent)}
 .rc-tag{display:inline-block;padding:3px 10px;background:var(--ndim);
   border:1px solid rgba(0,212,255,0.22);border-radius:100px;font-family:var(--fm);
   font-size:.56rem;color:var(--neon);letter-spacing:2px;margin-bottom:14px}
+.rc-tag.today-tag{background:rgba(255,107,53,0.1);border-color:rgba(255,107,53,0.3);color:var(--orange)}
 .rc-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px}
 .rc-pl{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:56px}
 .rc-av{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;
@@ -209,8 +206,7 @@ nav,.hero,.sec,.footer{position:relative;z-index:10}
 .rc-win{display:inline-flex;align-items:center;gap:5px;margin-top:12px;padding:5px 13px;
   background:rgba(0,255,136,0.07);border:1px solid rgba(0,255,136,0.2);
   border-radius:100px;font-family:var(--fm);font-size:.58rem;letter-spacing:1.5px;color:var(--green)}
-
-/* ── PLAYER CARDS ── */
+/* PLAYER CARDS */
 .pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .pcard{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--border);
   border-radius:18px;padding:26px 18px;text-align:center;position:relative;overflow:hidden;
@@ -239,7 +235,6 @@ nav,.hero,.sec,.footer{position:relative;z-index:10}
 .pc-pts-n{font-family:var(--fm);font-size:1.35rem;color:var(--gold);
   text-shadow:0 0 16px rgba(255,215,0,0.4)}
 .pc-pts-l{font-size:.6rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
-/* 2×2 stat grid */
 .pc-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:12px}
 .pcs{background:rgba(255,255,255,0.028);border:1px solid rgba(255,255,255,0.05);
   border-radius:var(--rs);padding:9px 5px}
@@ -255,8 +250,7 @@ nav,.hero,.sec,.footer{position:relative;z-index:10}
 .chip{padding:3px 10px;border-radius:100px;font-family:var(--fm);font-size:.63rem;letter-spacing:.5px}
 .cw{background:rgba(0,255,136,0.09);border:1px solid rgba(0,255,136,0.2);color:var(--green)}
 .cl{background:rgba(255,77,77,0.09);border:1px solid rgba(255,77,77,0.2);color:var(--red)}
-
-/* ── CHARTS ── */
+/* CHARTS */
 .ch2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
 .ch3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
 .cbox{background:var(--glass);backdrop-filter:blur(18px);border:1px solid var(--border);
@@ -265,7 +259,6 @@ nav,.hero,.sec,.footer{position:relative;z-index:10}
 .clbl{font-family:var(--fm);font-size:.65rem;letter-spacing:2px;color:var(--gold);
   text-transform:uppercase;margin-bottom:14px;text-align:center}
 .ci{max-height:195px}
-/* Stat strip */
 .cstrip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
 .cstr{background:var(--glass);backdrop-filter:blur(18px);border:1px solid var(--border);
   border-radius:var(--r);padding:18px 12px;text-align:center;transition:transform .3s}
@@ -274,30 +267,22 @@ nav,.hero,.sec,.footer{position:relative;z-index:10}
 .cstr-n{display:block;font-family:var(--fm);font-size:1.75rem;color:var(--gold);
   text-shadow:0 0 14px rgba(255,215,0,0.35);margin-bottom:4px;line-height:1}
 .cstr-l{font-size:.63rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
-
-/* ── FOOTER ── */
 .footer{border-top:1px solid var(--border);padding:40px 20px;text-align:center;
   background:rgba(0,0,0,0.16);position:relative;z-index:10}
 .fb{font-size:2rem;display:block;margin-bottom:9px;animation:ball-s 12s linear infinite}
-.fm{font-size:.92rem;color:rgba(240,248,255,0.62);margin-bottom:4px}
-.fm strong{color:var(--neon)}
+.fm-f{font-size:.92rem;color:rgba(240,248,255,0.62);margin-bottom:4px}
+.fm-f strong{color:var(--neon)}
 .fs{font-size:.72rem;color:rgba(240,248,255,0.24);letter-spacing:1px}
 .fi{display:flex;justify-content:center;gap:9px;margin-top:15px;font-size:1.1rem}
-
-/* ── CONFETTI ── */
 #cf{position:fixed;inset:0;pointer-events:none;z-index:9999;overflow:hidden}
 .cfp{position:absolute;top:-15px;border-radius:2px;animation:cf-f linear forwards}
 @keyframes cf-f{0%{transform:translateY(-15px) rotate(0);opacity:1}100%{transform:translateY(110vh) rotate(700deg);opacity:0}}
-
-/* ── REVEAL ── */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:translateY(0)}
-
-/* ── RESPONSIVE ── */
 @media(max-width:680px){
   .nav-links{display:none}
   .sec{padding:56px 14px}
-  .results-grid,.pcards,.ch2,.ch3{grid-template-columns:1fr}
+  .results-grid,.pcards,.ch2,.ch3,.h2h-grid{grid-template-columns:1fr}
   .cstrip{grid-template-columns:1fr 1fr}
   .col-legend{grid-template-columns:1fr 1fr}
   .stbl th,.stbl td{padding:11px 7px;font-size:.76rem}
@@ -313,6 +298,7 @@ nav,.hero,.sec,.footer{position:relative;z-index:10}
 <div class="bg-felt"></div><div class="bg-glow"></div>
 <div class="pocket ptl"></div><div class="pocket ptr"></div>
 <div class="pocket pbl"></div><div class="pocket pbr"></div>
+<div id="cf"></div>
 
 <!-- NAV -->
 <nav class="nav">
@@ -327,506 +313,617 @@ nav,.hero,.sec,.footer{position:relative;z-index:10}
 
 <!-- HERO -->
 <section class="hero" id="top">
+  <div class="cue cue-l"></div>
+  <div class="cue cue-r"></div>
   <div class="hi">
-    <div class="h-season">🎱 SEASON 02 · RESTARTED</div>
+    <div class="h-season">🎱 SEASON 02 · ONGOING</div>
     <h1>
       <span class="h-ball">🎱</span>
       <span class="h-t1">WADAU POOL</span>
       <span class="h-t2">MINI LEAGUE</span>
     </h1>
     <p class="h-tag">1 Month Battle of Precision, Skill &amp; Bragging Rights</p>
-    <div class="restart-badge">🔄 League restarted today — fresh scores, fresh battles</div>
+    <div class="restart-badge">🔥 Updated — 3 new matches added today</div>
     <div class="h-counters">
       <div class="hc"><span class="hc-n">3</span><span class="hc-l">Players</span></div>
       <div class="hc-sep"></div>
-      <div class="hc"><span class="hc-n" id="hcF">29</span><span class="hc-l">Frames Today</span></div>
+      <div class="hc"><span class="hc-n">116</span><span class="hc-l">Frames</span></div>
       <div class="hc-sep"></div>
-      <div class="hc"><span class="hc-n" id="hcP">45</span><span class="hc-l">Kim's Points</span></div>
-      <div class="hc-sep"></div>
-      <div class="hc"><span class="hc-n">3</span><span class="hc-l">Matches</span></div>
+      <div class="hc"><span class="hc-n">58</span><span class="hc-l">Wins</span></div>
     </div>
-    <a href="#standings" class="view-btn">🏆 View Standings <span class="vba">↓</span></a>
-    <div class="cue cue-l"></div><div class="cue cue-r"></div>
+    <a href="#standings" class="view-btn">VIEW STANDINGS <span class="vba">↓</span></a>
   </div>
-  <div class="scroll-h">scroll down</div>
+  <div class="scroll-h">SCROLL DOWN</div>
 </section>
 
 <!-- STANDINGS -->
-<section class="sec" id="standings">
+<section class="sec rv" id="standings">
   <div class="sec-head">
-    <div class="sec-pill">LEADERBOARD</div>
-    <h2 class="sec-title">🏆 League Standings</h2>
-    <p class="sec-sub">Points = 3 × every frame/game won &nbsp;·&nbsp; Win% used as tiebreaker</p>
+    <div class="sec-pill">LIVE TABLE</div>
+    <h2 class="sec-title">STANDINGS</h2>
+    <p class="sec-sub">Updated after today's session</p>
     <div class="divider"></div>
   </div>
 
-  <!-- HOW POINTS WORK -->
   <div class="pts-explainer">
-    <div class="pe-icon">⚽</div>
+    <div class="pe-icon">📋</div>
     <div class="pe-text">
-      <div class="pe-title">HOW POINTS ARE CALCULATED</div>
-      <div class="pe-desc">
-        Just like in football — every <strong>individual frame (game)</strong> you win earns you <strong>3 points</strong>.
-        So Kim winning 15 frames today = <strong>45 points</strong>. Henry and Simon both won 7 frames = <strong>21 points each</strong>.
-        When points are tied, the player with the better <strong>frame win%</strong> ranks higher.
-      </div>
+      <div class="pe-title">HOW POINTS WORK</div>
+      <div class="pe-desc">Every frame won = 1 Win. Points are calculated as <strong>Wins × 3</strong> (like football). When points are tied, the player with the better <strong>frame win%</strong> ranks higher.</div>
       <div class="pe-formula">Pts = Wins × 3</div>
     </div>
   </div>
 
-  <!-- COLUMN GUIDE -->
   <div class="col-legend">
-    <div class="cl-item"><b>P</b> — Frames Played today</div>
-    <div class="cl-item"><b>W</b> — Frames / Games Won</div>
-    <div class="cl-item loss-col"><b style="color:var(--red)">L</b> — Frames / Games Lost</div>
-    <div class="cl-item"><b>Win%</b> — W ÷ P × 100</div>
-    <div class="cl-item pts-col"><b>Pts</b> — W × 3 (like football)</div>
-    <div class="cl-item" style="color:rgba(0,212,255,0.5);font-style:italic">Tiebreaker → Win%</div>
+    <div class="cl-item"><b>P</b> – Frames Played</div>
+    <div class="cl-item"><b>W</b> – Frames Won</div>
+    <div class="cl-item loss-col"><b>L</b> – Frames Lost</div>
+    <div class="cl-item"><b>Win%</b> – W ÷ P × 100</div>
+    <div class="cl-item pts-col"><b>Pts</b> – W × 3</div>
+    <div class="cl-item"><b>Tiebreaker</b> → Win%</div>
   </div>
 
-  <div class="tbl-card rv">
+  <div class="tbl-card">
     <table class="stbl">
       <thead>
         <tr>
           <th>#</th>
           <th>Player</th>
-          <th title="Frames Played">P</th>
-          <th title="Frames Won">W</th>
-          <th title="Frames Lost">L</th>
-          <th title="Frame Win %">Win%</th>
-          <th title="Points = W × 3">Pts<br><small style="font-size:.45rem;opacity:.55;letter-spacing:0">(W×3)</small></th>
+          <th>P</th>
+          <th>W</th>
+          <th>L</th>
+          <th>Win%</th>
+          <th>Pts<br><span style="font-size:.5rem;opacity:.6">(W×3)</span></th>
         </tr>
       </thead>
       <tbody>
-
-        <!-- 1st: KIM -->
+        <!-- Kim: P=44 W=27 L=17 Win%=61.4% Pts=81 -->
         <tr class="p1">
           <td><span class="medal m1">🥇</span></td>
           <td>
             <div class="nc">
-              <div class="dot" style="background:#ffd700;box-shadow:0 0 10px rgba(255,215,0,0.4)">K</div>
-              <div><span class="pname">Kim</span><span class="prole">The Sharp Shooter</span></div>
-            </div>
-          </td>
-          <td>22</td>
-          <td style="color:var(--green);font-weight:700;font-size:1rem">15</td>
-          <td style="color:var(--red);font-weight:700">7</td>
-          <td>
-            <div class="wpct-wrap">
-              <span class="wpct-num" style="color:#ffd700">68.2%</span>
-              <div class="wpct-bar">
-                <div class="wpct-fill" data-w="68.2" style="background:linear-gradient(90deg,#ffd700,rgba(255,215,0,0.3))"></div>
+              <div class="dot" style="background:#ffd700">K</div>
+              <div>
+                <span class="pname">Kim</span>
+                <span class="prole">The Sharp Shooter</span>
               </div>
             </div>
           </td>
-          <td class="pts-val" style="font-size:1.1rem">45</td>
+          <td>44</td>
+          <td style="color:var(--green);font-weight:700">27</td>
+          <td style="color:var(--red)">17</td>
+          <td>
+            <div class="wpct-wrap">
+              <span class="wpct-num" style="color:var(--gold)">61.4%</span>
+              <div class="wpct-bar"><div class="wpct-fill" style="width:61.4%;background:var(--gold)"></div></div>
+            </div>
+          </td>
+          <td><span class="pts-val">81</span></td>
         </tr>
-
-        <!-- 2nd: HENRY -->
+        <!-- Henry: P=38 W=20 L=18 Win%=52.6% Pts=60 -->
         <tr class="p2">
           <td><span class="medal m2">🥈</span></td>
           <td>
             <div class="nc">
-              <div class="dot" style="background:#00d4ff;box-shadow:0 0 10px rgba(0,212,255,0.35)">H</div>
-              <div><span class="pname">Henry</span><span class="prole">The Comeback Kid</span></div>
-            </div>
-          </td>
-          <td>17</td>
-          <td style="color:var(--green);font-weight:700;font-size:1rem">7</td>
-          <td style="color:var(--red);font-weight:700">10</td>
-          <td>
-            <div class="wpct-wrap">
-              <span class="wpct-num" style="color:#00d4ff">41.2%</span>
-              <div class="wpct-bar">
-                <div class="wpct-fill" data-w="41.2" style="background:linear-gradient(90deg,#00d4ff,rgba(0,212,255,0.25))"></div>
+              <div class="dot" style="background:#00d4ff">H</div>
+              <div>
+                <span class="pname">Henry</span>
+                <span class="prole">The Comeback Kid</span>
               </div>
             </div>
           </td>
-          <td class="pts-val">21</td>
+          <td>38</td>
+          <td style="color:var(--green);font-weight:700">20</td>
+          <td style="color:var(--red)">18</td>
+          <td>
+            <div class="wpct-wrap">
+              <span class="wpct-num" style="color:var(--neon)">52.6%</span>
+              <div class="wpct-bar"><div class="wpct-fill" style="width:52.6%;background:var(--neon)"></div></div>
+            </div>
+          </td>
+          <td><span class="pts-val">60</span></td>
         </tr>
-
-        <!-- 3rd: SIMON -->
+        <!-- Simon: P=34 W=11 L=23 Win%=32.4% Pts=33 -->
         <tr class="p3">
           <td><span class="medal m3">🥉</span></td>
           <td>
             <div class="nc">
-              <div class="dot" style="background:#ff6b35;box-shadow:0 0 10px rgba(255,107,53,0.35)">S</div>
-              <div><span class="pname">Simon</span><span class="prole">The Cue Master</span></div>
-            </div>
-          </td>
-          <td>19</td>
-          <td style="color:var(--green);font-weight:700;font-size:1rem">7</td>
-          <td style="color:var(--red);font-weight:700">12</td>
-          <td>
-            <div class="wpct-wrap">
-              <span class="wpct-num" style="color:#ff6b35">36.8%</span>
-              <div class="wpct-bar">
-                <div class="wpct-fill" data-w="36.8" style="background:linear-gradient(90deg,#ff6b35,rgba(255,107,53,0.25))"></div>
+              <div class="dot" style="background:#ff6b35">S</div>
+              <div>
+                <span class="pname">Simon</span>
+                <span class="prole">The Cue Master</span>
               </div>
             </div>
           </td>
-          <td class="pts-val">21</td>
+          <td>34</td>
+          <td style="color:var(--green);font-weight:700">11</td>
+          <td style="color:var(--red)">23</td>
+          <td>
+            <div class="wpct-wrap">
+              <span class="wpct-num" style="color:var(--orange)">32.4%</span>
+              <div class="wpct-bar"><div class="wpct-fill" style="width:32.4%;background:var(--orange)"></div></div>
+            </div>
+          </td>
+          <td><span class="pts-val">33</span></td>
         </tr>
-
       </tbody>
     </table>
   </div>
-  <p style="text-align:center;margin-top:13px;font-size:.73rem;color:rgba(0,212,255,0.45);font-style:italic">
-    🎱 Henry &amp; Simon both on 21 pts — Henry is 2nd by better win% (41.2% vs 36.8%)
-  </p>
+
+  <!-- HEAD TO HEAD -->
+  <div class="h2h-section rv">
+    <div class="h2h-title">⚔️ Head-to-Head Records</div>
+    <div class="h2h-grid">
+      <!-- Kim vs Henry: Kim 13, Henry 11 -->
+      <div class="h2h-card">
+        <div class="h2h-matchup">Kim vs Henry</div>
+        <div class="h2h-scores">
+          <span class="h2h-w">13</span>
+          <span class="h2h-sep">–</span>
+          <span class="h2h-l">11</span>
+        </div>
+        <div class="h2h-names">
+          <span style="color:var(--gold)">Kim 🏆</span>
+          <span style="color:var(--muted)">Henry</span>
+        </div>
+      </div>
+      <!-- Kim vs Simon: Kim 14, Simon 8 -->
+      <div class="h2h-card">
+        <div class="h2h-matchup">Kim vs Simon</div>
+        <div class="h2h-scores">
+          <span class="h2h-w">14</span>
+          <span class="h2h-sep">–</span>
+          <span class="h2h-l">8</span>
+        </div>
+        <div class="h2h-names">
+          <span style="color:var(--gold)">Kim 🏆</span>
+          <span style="color:var(--muted)">Simon</span>
+        </div>
+      </div>
+      <!-- Henry vs Simon: Henry 9, Simon 7 -->
+      <div class="h2h-card">
+        <div class="h2h-matchup">Henry vs Simon</div>
+        <div class="h2h-scores">
+          <span class="h2h-w">9</span>
+          <span class="h2h-sep">–</span>
+          <span class="h2h-l">7</span>
+        </div>
+        <div class="h2h-names">
+          <span style="color:var(--neon)">Henry 🏆</span>
+          <span style="color:var(--muted)">Simon</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- MATCH RESULTS -->
-<section class="sec" id="results">
+<section class="sec rv" id="results">
   <div class="sec-head">
-    <div class="sec-pill">RESULTS</div>
-    <h2 class="sec-title">🎱 Match Results</h2>
+    <div class="sec-pill">MATCH HISTORY</div>
+    <h2 class="sec-title">MATCH RESULTS</h2>
     <p class="sec-sub">Each number = frames won by that player in the match</p>
     <div class="divider"></div>
   </div>
 
   <div class="results-grid">
-    <!-- Match 1 -->
+
+    <!-- TODAY'S MATCHES (highlighted) -->
+    <div class="rcard today rv">
+      <div class="rc-tag today-tag">🔥 TODAY · MATCH A</div>
+      <div class="rc-row">
+        <div class="rc-pl lose">
+          <div class="rc-av" style="background:#ff6b35">S</div>
+          <span class="rc-nm">Simon</span>
+        </div>
+        <div class="rc-sc">
+          <div class="rc-nums">
+            <span class="sc-l">2</span>
+            <span class="sc-sep">–</span>
+            <span class="sc-w">5</span>
+          </div>
+          <div class="rc-ft">7 frames played</div>
+        </div>
+        <div class="rc-pl win">
+          <div class="rc-av" style="background:#00d4ff">H</div>
+          <span class="rc-nm">Henry</span>
+        </div>
+      </div>
+      <div class="rc-win">✓ HENRY WINS</div>
+    </div>
+
+    <div class="rcard today rv">
+      <div class="rc-tag today-tag">🔥 TODAY · MATCH B</div>
+      <div class="rc-row">
+        <div class="rc-pl lose">
+          <div class="rc-av" style="background:#ffd700">K</div>
+          <span class="rc-nm">Kim</span>
+        </div>
+        <div class="rc-sc">
+          <div class="rc-nums">
+            <span class="sc-l">6</span>
+            <span class="sc-sep">–</span>
+            <span class="sc-w">8</span>
+          </div>
+          <div class="rc-ft">14 frames played</div>
+        </div>
+        <div class="rc-pl win">
+          <div class="rc-av" style="background:#00d4ff">H</div>
+          <span class="rc-nm">Henry</span>
+        </div>
+      </div>
+      <div class="rc-win">✓ HENRY WINS</div>
+    </div>
+
+    <div class="rcard today rv">
+      <div class="rc-tag today-tag">🔥 TODAY · MATCH C</div>
+      <div class="rc-row">
+        <div class="rc-pl lose">
+          <div class="rc-av" style="background:#ff6b35">S</div>
+          <span class="rc-nm">Simon</span>
+        </div>
+        <div class="rc-sc">
+          <div class="rc-nums">
+            <span class="sc-l">2</span>
+            <span class="sc-sep">–</span>
+            <span class="sc-w">6</span>
+          </div>
+          <div class="rc-ft">8 frames played</div>
+        </div>
+        <div class="rc-pl win">
+          <div class="rc-av" style="background:#ffd700">K</div>
+          <span class="rc-nm">Kim</span>
+        </div>
+      </div>
+      <div class="rc-win">✓ KIM WINS</div>
+    </div>
+
+    <!-- PREVIOUS MATCHES -->
     <div class="rcard rv">
       <div class="rc-tag">MATCH 1</div>
       <div class="rc-row">
         <div class="rc-pl win">
-          <div class="rc-av" style="background:#00d4ff;box-shadow:0 0 13px rgba(0,212,255,0.4)">H</div>
+          <div class="rc-av" style="background:#00d4ff">H</div>
           <span class="rc-nm">Henry</span>
         </div>
         <div class="rc-sc">
-          <div class="rc-nums"><span class="sc-w">4</span><span class="sc-sep">–</span><span class="sc-l">3</span></div>
+          <div class="rc-nums">
+            <span class="sc-w">4</span>
+            <span class="sc-sep">–</span>
+            <span class="sc-l">3</span>
+          </div>
           <div class="rc-ft">7 frames played</div>
         </div>
         <div class="rc-pl lose">
-          <div class="rc-av" style="background:#ff6b35;box-shadow:0 0 13px rgba(255,107,53,0.4)">S</div>
+          <div class="rc-av" style="background:#ff6b35">S</div>
           <span class="rc-nm">Simon</span>
         </div>
       </div>
-      <div class="rc-win">🏆 Henry wins · tight match!</div>
+      <div class="rc-win">✓ HENRY WINS</div>
     </div>
 
-    <!-- Match 2 -->
     <div class="rcard rv">
       <div class="rc-tag">MATCH 2</div>
       <div class="rc-row">
         <div class="rc-pl win">
-          <div class="rc-av" style="background:#ffd700;box-shadow:0 0 13px rgba(255,215,0,0.45)">K</div>
+          <div class="rc-av" style="background:#ffd700">K</div>
           <span class="rc-nm">Kim</span>
         </div>
         <div class="rc-sc">
-          <div class="rc-nums"><span class="sc-w">7</span><span class="sc-sep">–</span><span class="sc-l">3</span></div>
-          <div class="rc-ft">10 frames played</div>
+          <div class="rc-nums">
+            <span class="sc-w">5</span>
+            <span class="sc-sep">–</span>
+            <span class="sc-l">3</span>
+          </div>
+          <div class="rc-ft">8 frames played</div>
         </div>
         <div class="rc-pl lose">
-          <div class="rc-av" style="background:#00d4ff;box-shadow:0 0 13px rgba(0,212,255,0.4)">H</div>
-          <span class="rc-nm">Henry</span>
+          <div class="rc-av" style="background:#ff6b35">S</div>
+          <span class="rc-nm">Simon</span>
         </div>
       </div>
-      <div class="rc-win">🏆 Kim wins · dominant!</div>
+      <div class="rc-win">✓ KIM WINS</div>
     </div>
 
-    <!-- Match 3 -->
     <div class="rcard rv">
       <div class="rc-tag">MATCH 3</div>
       <div class="rc-row">
         <div class="rc-pl win">
-          <div class="rc-av" style="background:#ffd700;box-shadow:0 0 13px rgba(255,215,0,0.45)">K</div>
+          <div class="rc-av" style="background:#ffd700">K</div>
           <span class="rc-nm">Kim</span>
         </div>
         <div class="rc-sc">
-          <div class="rc-nums"><span class="sc-w">8</span><span class="sc-sep">–</span><span class="sc-l">4</span></div>
-          <div class="rc-ft">12 frames played</div>
+          <div class="rc-nums">
+            <span class="sc-w">6</span>
+            <span class="sc-sep">–</span>
+            <span class="sc-l">4</span>
+          </div>
+          <div class="rc-ft">10 frames played</div>
         </div>
         <div class="rc-pl lose">
-          <div class="rc-av" style="background:#ff6b35;box-shadow:0 0 13px rgba(255,107,53,0.4)">S</div>
-          <span class="rc-nm">Simon</span>
+          <div class="rc-av" style="background:#00d4ff">H</div>
+          <span class="rc-nm">Henry</span>
         </div>
       </div>
-      <div class="rc-win">🏆 Kim wins · commanding!</div>
+      <div class="rc-win">✓ KIM WINS</div>
     </div>
-  </div>
 
-  <div style="margin-top:18px;padding:13px 18px;background:rgba(255,215,0,0.04);
-    border:1px solid rgba(255,215,0,0.14);border-radius:11px;text-align:center;
-    font-size:.79rem;color:rgba(255,215,0,0.6);letter-spacing:.4px">
-    💡 Kim's 15 wins = 7 (vs Henry) + 8 (vs Simon) = <strong style="color:var(--gold)">45 pts</strong>.
-    Henry's 7 wins = 4 (vs Simon) + 3 (vs Kim) = <strong style="color:var(--gold)">21 pts</strong>.
-    Simon's 7 wins = 3 (vs Henry) + 4 (vs Kim) = <strong style="color:var(--gold)">21 pts</strong>.
   </div>
 </section>
 
-<!-- PLAYER CARDS -->
-<section class="sec" id="players">
+<!-- PLAYER PROFILES -->
+<section class="sec rv" id="players">
   <div class="sec-head">
     <div class="sec-pill">ROSTER</div>
-    <h2 class="sec-title">👥 Player Profiles</h2>
+    <h2 class="sec-title">PLAYER PROFILES</h2>
+    <p class="sec-sub">Individual stats &amp; performance breakdown</p>
     <div class="divider"></div>
   </div>
-  <div class="pcards">
 
+  <div class="pcards">
     <!-- KIM -->
     <div class="pcard gold rv">
-      <div class="pc-badge" style="background:linear-gradient(135deg,#ffd700,#b8860b);color:#000">1</div>
-      <div class="pc-av" style="background:#ffd700;box-shadow:0 0 20px rgba(255,215,0,0.5)">
-        <span class="pc-crown">👑</span>K
+      <div class="pc-badge" style="background:var(--gdim);color:var(--gold);border:1px solid rgba(255,215,0,0.3)">1st</div>
+      <div class="pc-av" style="background:linear-gradient(135deg,#ffd700,#b8860b)">
+        <span class="pc-crown">👑</span>
+        K
       </div>
       <div class="pc-name">Kim</div>
       <div class="pc-role">The Sharp Shooter</div>
       <div class="pc-rank">🥇 League Leader</div>
-      <div class="pc-pts"><span class="pc-pts-n">45</span><span class="pc-pts-l">Points</span></div>
+      <div class="pc-pts">
+        <span class="pc-pts-n">81</span>
+        <span class="pc-pts-l">PTS</span>
+      </div>
       <div class="pc-grid">
-        <div class="pcs"><span class="pcs-n" style="color:var(--neon)">22</span><span class="pcs-l">Frames Played</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--green)">15</span><span class="pcs-l">Frames Won</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--red)">7</span><span class="pcs-l">Frames Lost</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--gold)">45</span><span class="pcs-l">Pts (15×3)</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--green)">27</span><span class="pcs-l">Wins</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--red)">17</span><span class="pcs-l">Losses</span></div>
+        <div class="pcs"><span class="pcs-n">44</span><span class="pcs-l">Played</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--gold)">61.4%</span><span class="pcs-l">Win Rate</span></div>
       </div>
       <div class="pc-bar">
         <span class="pb-lbl">Win%</span>
-        <div class="pb-track"><div class="pb-fill" data-w="68.2" style="background:linear-gradient(90deg,#ffd700,rgba(255,215,0,0.3))"></div></div>
-        <span class="pb-pct" style="color:#ffd700">68.2%</span>
+        <div class="pb-track"><div class="pb-fill" style="width:61.4%;background:var(--gold)"></div></div>
+        <span class="pb-pct" style="color:var(--gold)">61.4%</span>
       </div>
-      <div class="pc-chips"><span class="chip cw">15 WINS</span><span class="chip cl">7 LOSSES</span></div>
+      <div class="pc-chips">
+        <span class="chip cw">27 W</span>
+        <span class="chip cl">17 L</span>
+      </div>
     </div>
 
     <!-- HENRY -->
     <div class="pcard silver rv">
-      <div class="pc-badge" style="background:linear-gradient(135deg,#d0d0d0,#888);color:#000">2</div>
-      <div class="pc-av" style="background:#00d4ff;box-shadow:0 0 20px rgba(0,212,255,0.5)">H</div>
+      <div class="pc-badge" style="background:rgba(192,192,192,0.1);color:#ccc;border:1px solid rgba(192,192,192,0.3)">2nd</div>
+      <div class="pc-av" style="background:linear-gradient(135deg,#00d4ff,#0077aa)">H</div>
       <div class="pc-name">Henry</div>
       <div class="pc-role">The Comeback Kid</div>
-      <div class="pc-rank">🥈 Runner Up</div>
-      <div class="pc-pts"><span class="pc-pts-n">21</span><span class="pc-pts-l">Points</span></div>
+      <div class="pc-rank">🥈 2nd Place</div>
+      <div class="pc-pts">
+        <span class="pc-pts-n">60</span>
+        <span class="pc-pts-l">PTS</span>
+      </div>
       <div class="pc-grid">
-        <div class="pcs"><span class="pcs-n" style="color:var(--neon)">17</span><span class="pcs-l">Frames Played</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--green)">7</span><span class="pcs-l">Frames Won</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--red)">10</span><span class="pcs-l">Frames Lost</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--gold)">21</span><span class="pcs-l">Pts (7×3)</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--green)">20</span><span class="pcs-l">Wins</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--red)">18</span><span class="pcs-l">Losses</span></div>
+        <div class="pcs"><span class="pcs-n">38</span><span class="pcs-l">Played</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--neon)">52.6%</span><span class="pcs-l">Win Rate</span></div>
       </div>
       <div class="pc-bar">
         <span class="pb-lbl">Win%</span>
-        <div class="pb-track"><div class="pb-fill" data-w="41.2" style="background:linear-gradient(90deg,#00d4ff,rgba(0,212,255,0.25))"></div></div>
-        <span class="pb-pct" style="color:#00d4ff">41.2%</span>
+        <div class="pb-track"><div class="pb-fill" style="width:52.6%;background:var(--neon)"></div></div>
+        <span class="pb-pct" style="color:var(--neon)">52.6%</span>
       </div>
-      <div class="pc-chips"><span class="chip cw">7 WINS</span><span class="chip cl">10 LOSSES</span></div>
+      <div class="pc-chips">
+        <span class="chip cw">20 W</span>
+        <span class="chip cl">18 L</span>
+      </div>
     </div>
 
     <!-- SIMON -->
     <div class="pcard bronze rv">
-      <div class="pc-badge" style="background:linear-gradient(135deg,#cd7f32,#7b4013);color:#fff">3</div>
-      <div class="pc-av" style="background:#ff6b35;box-shadow:0 0 20px rgba(255,107,53,0.5)">S</div>
+      <div class="pc-badge" style="background:rgba(205,127,50,0.1);color:#cd7f32;border:1px solid rgba(205,127,50,0.3)">3rd</div>
+      <div class="pc-av" style="background:linear-gradient(135deg,#ff6b35,#aa3300)">S</div>
       <div class="pc-name">Simon</div>
       <div class="pc-role">The Cue Master</div>
-      <div class="pc-rank">🥉 Third Place</div>
-      <div class="pc-pts"><span class="pc-pts-n">21</span><span class="pc-pts-l">Points</span></div>
+      <div class="pc-rank">🥉 3rd Place</div>
+      <div class="pc-pts">
+        <span class="pc-pts-n">33</span>
+        <span class="pc-pts-l">PTS</span>
+      </div>
       <div class="pc-grid">
-        <div class="pcs"><span class="pcs-n" style="color:var(--neon)">19</span><span class="pcs-l">Frames Played</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--green)">7</span><span class="pcs-l">Frames Won</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--red)">12</span><span class="pcs-l">Frames Lost</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--gold)">21</span><span class="pcs-l">Pts (7×3)</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--green)">11</span><span class="pcs-l">Wins</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--red)">23</span><span class="pcs-l">Losses</span></div>
+        <div class="pcs"><span class="pcs-n">34</span><span class="pcs-l">Played</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--orange)">32.4%</span><span class="pcs-l">Win Rate</span></div>
       </div>
       <div class="pc-bar">
         <span class="pb-lbl">Win%</span>
-        <div class="pb-track"><div class="pb-fill" data-w="36.8" style="background:linear-gradient(90deg,#ff6b35,rgba(255,107,53,0.25))"></div></div>
-        <span class="pb-pct" style="color:#ff6b35">36.8%</span>
+        <div class="pb-track"><div class="pb-fill" style="width:32.4%;background:var(--orange)"></div></div>
+        <span class="pb-pct" style="color:var(--orange)">32.4%</span>
       </div>
-      <div class="pc-chips"><span class="chip cw">7 WINS</span><span class="chip cl">12 LOSSES</span></div>
+      <div class="pc-chips">
+        <span class="chip cw">11 W</span>
+        <span class="chip cl">23 L</span>
+      </div>
     </div>
-
   </div>
 </section>
 
-<!-- STATS / CHARTS -->
-<section class="sec" id="stats">
+<!-- STATS & CHARTS -->
+<section class="sec rv" id="stats">
   <div class="sec-head">
     <div class="sec-pill">ANALYTICS</div>
-    <h2 class="sec-title">📊 Performance Stats</h2>
+    <h2 class="sec-title">STATS &amp; CHARTS</h2>
+    <p class="sec-sub">Visual breakdown of the league so far</p>
     <div class="divider"></div>
   </div>
 
   <div class="ch2">
-    <div class="cbox rv"><div class="clbl">Points (W × 3)</div><div class="ci"><canvas id="cPts"></canvas></div></div>
-    <div class="cbox rv"><div class="clbl">Frame Win %</div><div class="ci"><canvas id="cWpct"></canvas></div></div>
+    <div class="cbox rv">
+      <div class="clbl">Points Comparison</div>
+      <div class="ci"><canvas id="chartPts"></canvas></div>
+    </div>
+    <div class="cbox rv">
+      <div class="clbl">Win Rate %</div>
+      <div class="ci"><canvas id="chartWin"></canvas></div>
+    </div>
   </div>
+
   <div class="ch3">
-    <div class="cbox rv"><div class="clbl">Frames Won vs Lost</div><div class="ci"><canvas id="cWL"></canvas></div></div>
-    <div class="cbox rv"><div class="clbl">Frames Played Today</div><div class="ci"><canvas id="cPlayed"></canvas></div></div>
-    <div class="cbox rv"><div class="clbl">Points Share</div><div class="ci"><canvas id="cShare"></canvas></div></div>
+    <div class="cbox rv">
+      <div class="clbl">Frames Played</div>
+      <div class="ci"><canvas id="chartPlayed"></canvas></div>
+    </div>
+    <div class="cbox rv">
+      <div class="clbl">Wins vs Losses</div>
+      <div class="ci"><canvas id="chartWL"></canvas></div>
+    </div>
+    <div class="cbox rv">
+      <div class="clbl">Points Distribution</div>
+      <div class="ci"><canvas id="chartDist"></canvas></div>
+    </div>
   </div>
 
   <div class="cstrip">
-    <div class="cstr rv"><span class="cstr-icon">🎱</span><span class="cstr-n" id="ct1">0</span><span class="cstr-l">Frames Today</span></div>
-    <div class="cstr rv"><span class="cstr-icon">👑</span><span class="cstr-n" id="ct2">0</span><span class="cstr-l">Kim's Points</span></div>
-    <div class="cstr rv"><span class="cstr-icon">🎯</span><span class="cstr-n" id="ct3">0</span><span class="cstr-l">Total Points Scored</span></div>
-    <div class="cstr rv"><span class="cstr-icon">💥</span><span class="cstr-n" id="ct4">0</span><span class="cstr-l">Biggest Win Margin</span></div>
+    <div class="cstr rv">
+      <span class="cstr-icon">🎱</span>
+      <span class="cstr-n">116</span>
+      <span class="cstr-l">Total Frames</span>
+    </div>
+    <div class="cstr rv">
+      <span class="cstr-icon">🏆</span>
+      <span class="cstr-n">58</span>
+      <span class="cstr-l">Total Wins</span>
+    </div>
+    <div class="cstr rv">
+      <span class="cstr-icon">👑</span>
+      <span class="cstr-n">Kim</span>
+      <span class="cstr-l">League Leader</span>
+    </div>
+    <div class="cstr rv">
+      <span class="cstr-icon">⚡</span>
+      <span class="cstr-n">61.4%</span>
+      <span class="cstr-l">Top Win Rate</span>
+    </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <span class="fb">🎱</span>
-  <p class="fm">Built for the <strong>Wadau</strong> 🎱</p>
-  <p class="fs">Season 02 · Restarted · 3 Players · 3 Matches · 29 Frames · 87 Total Points</p>
-  <div class="fi"><span>🎱</span><span>🎯</span><span>🏆</span><span>🥇</span><span>🎱</span></div>
+  <p class="fm-f">Powered by <strong>Wadau League</strong> · Season 02</p>
+  <p class="fs">wadau-mini-league.vercel.app</p>
+  <div class="fi">🎱 🏆 ⚡</div>
 </footer>
-<div id="cf"></div>
 
 <script>
-/* ── CANVAS BG ── */
+// ── BG CANVAS ──
 (function(){
   const c=document.getElementById('bgCanvas'),ctx=c.getContext('2d');
-  function rs(){c.width=window.innerWidth;c.height=window.innerHeight;}
-  rs();window.addEventListener('resize',rs);
-  const BC=['#f5de0a','#1a52c8','#e8201e','#6a1a9a','#f07010','#1a6a1a','#8a1a1a','#111','#00d4ff','#ffd700'];
-  const balls=Array.from({length:12},(_,i)=>({
-    x:Math.random()*1200,y:Math.random()*800,r:12+Math.random()*10,
-    vx:(Math.random()-.5)*.38,vy:(Math.random()-.5)*.38,
-    color:BC[i%BC.length],alpha:.07+Math.random()*.06,
-    rot:Math.random()*Math.PI*2,rv:(Math.random()-.5)*.01,
-    stripe:i>5,num:(i%10)+1
-  }));
-  const cues=Array.from({length:3},()=>({
-    x:Math.random()*1200,y:Math.random()*800,
-    angle:Math.random()*Math.PI*2,spd:(Math.random()-.5)*.0026,
-    alpha:.028+Math.random()*.028,len:145+Math.random()*90
-  }));
-  function lx(hex,a){const n=parseInt(hex.replace('#',''),16);return`rgb(${Math.min(255,(n>>16)+a)},${Math.min(255,((n>>8)&0xff)+a)},${Math.min(255,(n&0xff)+a)})`;}
-  function db(b){
-    ctx.save();ctx.globalAlpha=b.alpha;ctx.translate(b.x,b.y);ctx.rotate(b.rot);
-    const g=ctx.createRadialGradient(-b.r*.32,-b.r*.32,b.r*.08,0,0,b.r);
-    g.addColorStop(0,lx(b.color,55));g.addColorStop(1,b.color);
-    ctx.beginPath();ctx.arc(0,0,b.r,0,Math.PI*2);ctx.fillStyle=g;ctx.fill();
-    if(b.stripe){ctx.save();ctx.clip();ctx.fillStyle='rgba(255,255,255,0.5)';ctx.fillRect(-b.r,-b.r*.32,b.r*2,b.r*.64);ctx.restore();}
-    ctx.beginPath();ctx.arc(0,0,b.r*.4,0,Math.PI*2);ctx.fillStyle='rgba(255,255,255,0.87)';ctx.fill();
-    ctx.fillStyle='#000';ctx.font=`bold ${b.r*.44}px Rajdhani`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(b.num,0,0);
-    ctx.restore();
-  }
-  function tick(){
-    ctx.clearRect(0,0,c.width,c.height);
-    cues.forEach(cu=>{
-      cu.angle+=cu.spd;
-      const x2=cu.x+Math.cos(cu.angle)*cu.len,y2=cu.y+Math.sin(cu.angle)*cu.len;
-      const g=ctx.createLinearGradient(cu.x,cu.y,x2,y2);
-      g.addColorStop(0,`rgba(198,155,26,${cu.alpha})`);g.addColorStop(.6,`rgba(128,85,12,${cu.alpha*.4})`);g.addColorStop(1,'transparent');
-      ctx.beginPath();ctx.moveTo(cu.x,cu.y);ctx.lineTo(x2,y2);ctx.strokeStyle=g;ctx.lineWidth=4;ctx.lineCap='round';ctx.stroke();
-    });
+  let W,H,balls=[];
+  function resize(){W=c.width=innerWidth;H=c.height=innerHeight}
+  resize();window.addEventListener('resize',resize);
+  const COLORS=['rgba(0,212,255,0.06)','rgba(255,215,0,0.05)','rgba(0,255,136,0.04)','rgba(255,107,53,0.04)'];
+  for(let i=0;i<8;i++)balls.push({x:Math.random()*1200,y:Math.random()*800,r:Math.random()*60+20,
+    dx:(Math.random()-.5)*.35,dy:(Math.random()-.5)*.35,c:COLORS[i%COLORS.length]});
+  function draw(){
+    ctx.clearRect(0,0,W,H);
     balls.forEach(b=>{
-      b.x+=b.vx;b.y+=b.vy;b.rot+=b.rv;
-      if(b.x<-b.r*2)b.x=c.width+b.r*2;if(b.x>c.width+b.r*2)b.x=-b.r*2;
-      if(b.y<-b.r*2)b.y=c.height+b.r*2;if(b.y>c.height+b.r*2)b.y=-b.r*2;
-      db(b);
+      b.x+=b.dx;b.y+=b.dy;
+      if(b.x<-b.r)b.x=W+b.r;if(b.x>W+b.r)b.x=-b.r;
+      if(b.y<-b.r)b.y=H+b.r;if(b.y>H+b.r)b.y=-b.r;
+      const g=ctx.createRadialGradient(b.x,b.y,0,b.x,b.y,b.r);
+      g.addColorStop(0,b.c);g.addColorStop(1,'transparent');
+      ctx.fillStyle=g;ctx.beginPath();ctx.arc(b.x,b.y,b.r,0,Math.PI*2);ctx.fill();
     });
-    requestAnimationFrame(tick);
+    requestAnimationFrame(draw);
   }
-  tick();
+  draw();
 })();
 
-/* ── COUNTER ── */
-function cnt(el,to,ms=1300){
-  if(!el)return;let v=0,s=to/(ms/16);
-  const t=setInterval(()=>{v+=s;if(v>=to){el.textContent=to;clearInterval(t);}else el.textContent=Math.floor(v);},16);
-}
-
-/* ── CHARTS ── */
-Chart.defaults.color='rgba(240,248,255,0.42)';
-Chart.defaults.font={family:'Rajdhani',size:12};
-const GR='rgba(255,255,255,0.05)',TK='rgba(240,248,255,0.36)';
-const NM=['Kim','Henry','Simon'],CO=['#ffd700','#00d4ff','#ff6b35'];
-
-// Points
-new Chart(document.getElementById('cPts'),{type:'bar',
-  data:{labels:NM,datasets:[{data:[45,21,21],backgroundColor:CO.map(c=>c+'44'),borderColor:CO,borderWidth:2,borderRadius:9,label:'Points'}]},
-  options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{display:false}},
-    scales:{x:{grid:{color:GR},ticks:{color:TK}},y:{grid:{color:GR},ticks:{color:TK,stepSize:3},min:0,max:48}},
-    animation:{duration:1400,easing:'easeOutBounce'}}
-});
-
-// Win%
-new Chart(document.getElementById('cWpct'),{type:'bar',
-  data:{labels:NM,datasets:[{data:[68.2,41.2,36.8],backgroundColor:CO.map(c=>c+'44'),borderColor:CO,borderWidth:2,borderRadius:9,label:'Win %'}]},
-  options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{display:false}},
-    scales:{x:{grid:{color:GR},ticks:{color:TK}},y:{grid:{color:GR},ticks:{color:TK,callback:v=>v+'%'},min:0,max:100}},
-    animation:{duration:1400}}
-});
-
-// Won vs Lost
-new Chart(document.getElementById('cWL'),{type:'bar',
-  data:{labels:NM,datasets:[
-    {label:'Won', data:[15,7,7],backgroundColor:CO.map(c=>c+'55'),borderColor:CO,borderWidth:2,borderRadius:6},
-    {label:'Lost',data:[7,10,12],backgroundColor:'rgba(255,77,77,0.2)',borderColor:'#ff4d4d',borderWidth:2,borderRadius:6}
-  ]},
-  options:{responsive:true,maintainAspectRatio:true,
-    plugins:{legend:{labels:{color:'rgba(240,248,255,0.52)',boxWidth:9,padding:9}}},
-    scales:{x:{grid:{color:GR},ticks:{color:TK}},y:{grid:{color:GR},ticks:{color:TK}}},
-    animation:{duration:1400}}
-});
-
-// Frames played
-new Chart(document.getElementById('cPlayed'),{type:'bar',
-  data:{labels:NM,datasets:[{data:[22,17,19],backgroundColor:CO.map(c=>c+'33'),borderColor:CO,borderWidth:2,borderRadius:8,label:'Frames'}]},
-  options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{display:false}},
-    scales:{x:{grid:{color:GR},ticks:{color:TK}},y:{grid:{color:GR},ticks:{color:TK},min:0}},
-    animation:{duration:1400}}
-});
-
-// Points share doughnut
-new Chart(document.getElementById('cShare'),{type:'doughnut',
-  data:{labels:NM,datasets:[{data:[45,21,21],backgroundColor:CO.map(c=>c+'99'),borderColor:CO,borderWidth:2}]},
-  options:{responsive:true,maintainAspectRatio:true,cutout:'62%',
-    plugins:{legend:{position:'bottom',labels:{color:'rgba(240,248,255,0.52)',boxWidth:9,padding:10}}},
-    animation:{duration:1400,animateRotate:true}}
-});
-
-/* ── CONFETTI ── */
+// ── CONFETTI ──
 function confetti(){
-  const w=document.getElementById('cf');
-  const cols=['#ffd700','#00d4ff','#ff6b35','#00ff88','#ff3b30','#a855f7'];
-  for(let i=0;i<65;i++){
-    const el=document.createElement('div');el.className='cfp';
-    const s=5+Math.random()*7;
-    el.style.cssText=`left:${Math.random()*100}%;width:${s}px;height:${s*(Math.random()>.5?1:2.3)}px;background:${cols[Math.floor(Math.random()*cols.length)]};animation-duration:${2+Math.random()*2}s;animation-delay:${Math.random()}s;`;
-    w.appendChild(el);el.addEventListener('animationend',()=>el.remove());
+  const cf=document.getElementById('cf');
+  const colors=['#ffd700','#00d4ff','#00ff88','#ff6b35','#fff'];
+  for(let i=0;i<55;i++){
+    const p=document.createElement('div');
+    p.className='cfp';
+    const size=Math.random()*8+4;
+    p.style.cssText=`left:${Math.random()*100}%;width:${size}px;height:${size}px;
+      background:${colors[Math.floor(Math.random()*colors.length)]};
+      animation-duration:${Math.random()*2.5+2}s;animation-delay:${Math.random()*1.2}s`;
+    cf.appendChild(p);
+    setTimeout(()=>p.remove(),(Math.random()*2.5+2)*1000+1200);
   }
 }
+setTimeout(confetti,800);
 
-/* ── REVEAL ── */
-const ro=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add('in');
-      e.target.querySelectorAll('.wpct-fill[data-w],.pb-fill[data-w]').forEach(b=>{
-        setTimeout(()=>{b.style.width=b.getAttribute('data-w')+'%';},350);
-      });
-      ro.unobserve(e.target);
-    }
-  });
-},{threshold:.1});
-document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+// ── SCROLL REVEAL ──
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}});
+},{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 
-/* ── STAT COUNTERS ── */
-const so=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      cnt(document.getElementById('ct1'),29);
-      cnt(document.getElementById('ct2'),45);
-      cnt(document.getElementById('ct3'),87); // 45+21+21
-      cnt(document.getElementById('ct4'),4);  // biggest margin: 8-4=4 or 7-3=4
-      so.disconnect();
-    }
-  });
-},{threshold:.3});
-const ss=document.getElementById('stats');
-if(ss)so.observe(ss);
+// ── CHARTS ──
+const PLAYERS=['Kim','Henry','Simon'];
+const COLORS_P=['#ffd700','#00d4ff','#ff6b35'];
+const PTS=[81,60,33];
+const WINS=[27,20,11];
+const LOSSES=[17,18,23];
+const PLAYED=[44,38,34];
+const WINPCT=[61.4,52.6,32.4];
 
-/* Animate hero counters + win% bars on load */
+const baseOpts={responsive:true,maintainAspectRatio:true,
+  plugins:{legend:{display:false},tooltip:{bodyFont:{family:'Orbitron'},titleFont:{family:'Orbitron'}}},
+  scales:{x:{ticks:{color:'rgba(240,248,255,0.45)',font:{family:'Rajdhani',size:11}},
+    grid:{color:'rgba(255,255,255,0.04)'}},
+    y:{ticks:{color:'rgba(240,248,255,0.45)',font:{family:'Rajdhani',size:11}},
+    grid:{color:'rgba(255,255,255,0.04)'}}
+  }};
+
+// Points bar
+new Chart(document.getElementById('chartPts'),{type:'bar',
+  data:{labels:PLAYERS,datasets:[{data:PTS,backgroundColor:COLORS_P,borderRadius:6,borderSkipped:false}]},
+  options:{...baseOpts}});
+
+// Win rate bar
+new Chart(document.getElementById('chartWin'),{type:'bar',
+  data:{labels:PLAYERS,datasets:[{data:WINPCT,backgroundColor:COLORS_P,borderRadius:6,borderSkipped:false}]},
+  options:{...baseOpts,scales:{...baseOpts.scales,y:{...baseOpts.scales.y,max:100}}}});
+
+// Frames played doughnut
+new Chart(document.getElementById('chartPlayed'),{type:'doughnut',
+  data:{labels:PLAYERS,datasets:[{data:PLAYED,backgroundColor:COLORS_P,borderWidth:0,hoverOffset:6}]},
+  options:{responsive:true,maintainAspectRatio:true,cutout:'60%',
+    plugins:{legend:{display:true,position:'bottom',labels:{color:'rgba(240,248,255,0.55)',
+      font:{family:'Rajdhani',size:11},padding:12,boxWidth:10}}}}});
+
+// Wins vs Losses grouped bar
+new Chart(document.getElementById('chartWL'),{type:'bar',
+  data:{labels:PLAYERS,datasets:[
+    {label:'Wins',data:WINS,backgroundColor:'rgba(0,255,136,0.55)',borderRadius:4,borderSkipped:false},
+    {label:'Losses',data:LOSSES,backgroundColor:'rgba(255,77,77,0.45)',borderRadius:4,borderSkipped:false}
+  ]},
+  options:{...baseOpts,plugins:{...baseOpts.plugins,legend:{display:true,position:'bottom',
+    labels:{color:'rgba(240,248,255,0.55)',font:{family:'Rajdhani',size:11},padding:12,boxWidth:10}}}}});
+
+// Points doughnut
+new Chart(document.getElementById('chartDist'),{type:'doughnut',
+  data:{labels:PLAYERS,datasets:[{data:PTS,backgroundColor:COLORS_P,borderWidth:0,hoverOffset:6}]},
+  options:{responsive:true,maintainAspectRatio:true,cutout:'60%',
+    plugins:{legend:{display:true,position:'bottom',labels:{color:'rgba(240,248,255,0.55)',
+      font:{family:'Rajdhani',size:11},padding:12,boxWidth:10}}}}});
+
+// ── ANIMATE WIN% BARS ON LOAD ──
 setTimeout(()=>{
-  cnt(document.getElementById('hcF'),29,1100);
-  cnt(document.getElementById('hcP'),45,1300);
-  document.querySelectorAll('.wpct-fill[data-w],.pb-fill[data-w]').forEach(b=>{
-    b.style.width=b.getAttribute('data-w')+'%';
+  document.querySelectorAll('.wpct-fill').forEach(el=>{
+    el.style.width=el.style.width;
   });
-},900);
-
-setTimeout(confetti,900);
+  document.querySelectorAll('.pb-fill').forEach(el=>{
+    el.style.width=el.style.width;
+  });
+},200);
 </script>
 </body>
 </html>
