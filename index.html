@@ -104,6 +104,83 @@ nav,.hero,.sec,.footer,.gallery-strip,.photo-divider{position:relative;z-index:1
   font-size:.56rem;letter-spacing:4px;text-transform:uppercase;
   color:rgba(240,255,244,0.16);animation:sh-f 2.6s ease-in-out infinite}
 @keyframes sh-f{0%,100%{opacity:.16;transform:translateX(-50%) translateY(0)}50%{opacity:.4;transform:translateX(-50%) translateY(7px)}}
+/* CHAMPION */
+.champ-sec{padding:80px 20px 60px;max-width:1100px;margin:0 auto;text-align:center;position:relative}
+.champ-pill{display:inline-block;padding:5px 20px;background:rgba(255,215,0,0.1);
+  border:1px solid rgba(255,215,0,0.35);border-radius:100px;font-family:var(--fm);
+  font-size:.62rem;color:var(--gold);letter-spacing:3px;margin-bottom:18px;animation:pulse-b 2.5s ease-in-out infinite}
+.champ-title{font-family:var(--fd);font-size:clamp(2.2rem,6vw,3.6rem);letter-spacing:5px;color:var(--white);margin-bottom:6px}
+.champ-sub{font-size:.85rem;color:var(--muted);letter-spacing:1px;margin-bottom:40px;font-style:italic}
+.champ-card{position:relative;max-width:560px;margin:0 auto;padding:54px 36px 44px;border-radius:28px;
+  background:radial-gradient(ellipse 120% 100% at 50% 0%,rgba(255,215,0,0.14),rgba(5,14,5,0.9) 60%);
+  border:1.5px solid rgba(255,215,0,0.4);
+  box-shadow:0 0 60px rgba(255,215,0,0.18),0 0 120px rgba(255,215,0,0.08),inset 0 0 60px rgba(255,215,0,0.05);
+  overflow:visible;animation:champ-pulse 3.2s ease-in-out infinite}
+@keyframes champ-pulse{0%,100%{box-shadow:0 0 60px rgba(255,215,0,0.18),0 0 120px rgba(255,215,0,0.08),inset 0 0 60px rgba(255,215,0,0.05)}
+  50%{box-shadow:0 0 80px rgba(255,215,0,0.32),0 0 160px rgba(255,215,0,0.14),inset 0 0 80px rgba(255,215,0,0.09)}}
+.champ-sparkles{position:absolute;inset:0;pointer-events:none;overflow:visible}
+.spark{position:absolute;font-size:1.1rem;animation:spark-tw 2.4s ease-in-out infinite}
+.spark:nth-child(1){top:6%;left:8%;animation-delay:0s}
+.spark:nth-child(2){top:14%;right:10%;animation-delay:.5s}
+.spark:nth-child(3){bottom:18%;left:4%;animation-delay:1s}
+.spark:nth-child(4){bottom:8%;right:6%;animation-delay:1.5s}
+.spark:nth-child(5){top:46%;left:-2%;animation-delay:.8s}
+.spark:nth-child(6){top:40%;right:-2%;animation-delay:1.8s}
+@keyframes spark-tw{0%,100%{opacity:.15;transform:scale(.7) rotate(0deg)}50%{opacity:1;transform:scale(1.3) rotate(25deg)}}
+.champ-crown{font-size:2.6rem;display:inline-block;animation:crown-float 3s ease-in-out infinite;
+  filter:drop-shadow(0 0 16px rgba(255,215,0,0.7));margin-bottom:6px}
+@keyframes crown-float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-10px) rotate(3deg)}}
+.champ-trophy{font-size:3.4rem;display:block;margin:6px auto 14px;animation:trophy-spin 6s linear infinite;
+  filter:drop-shadow(0 0 20px rgba(255,215,0,0.6))}
+@keyframes trophy-spin{0%{transform:rotateY(0deg)}50%{transform:rotateY(180deg)}100%{transform:rotateY(360deg)}}
+.champ-8ball{position:absolute;bottom:-26px;right:-26px;width:84px;height:84px;border-radius:50%;
+  background:radial-gradient(circle at 32% 28%,#3a3a3a,#111 45%,#000);
+  box-shadow:0 0 0 3px rgba(255,215,0,0.3),0 0 30px rgba(255,215,0,0.2),inset -8px -8px 18px rgba(0,0,0,0.6);
+  display:flex;align-items:center;justify-content:center;animation:ball-float 4.5s ease-in-out infinite}
+.champ-8ball span{width:30px;height:30px;border-radius:50%;background:#fff;display:flex;align-items:center;
+  justify-content:center;font-family:var(--fd);font-size:1.2rem;color:#111}
+.champ-badge-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+.champ-badge{padding:4px 14px;border-radius:100px;font-family:var(--fm);font-size:.56rem;letter-spacing:2px}
+.champ-badge.b1{background:rgba(255,215,0,0.12);color:var(--gold);border:1px solid rgba(255,215,0,0.4)}
+.champ-badge.b2{background:rgba(0,255,136,0.08);color:var(--neon);border:1px solid rgba(0,255,136,0.35)}
+.champ-name{font-family:var(--fd);font-size:clamp(3rem,10vw,4.6rem);letter-spacing:6px;line-height:1;
+  background:linear-gradient(90deg,#fff,var(--gold),#fff);background-size:280%;-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;animation:txt-sh 4s linear infinite;margin-bottom:8px}
+.champ-role{font-size:.9rem;color:var(--gold);letter-spacing:2px;margin-bottom:26px;font-style:italic}
+.champ-stats{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:24px;flex-wrap:wrap}
+.cst{display:flex;flex-direction:column;align-items:center;padding:0 22px}
+.cst-n{font-family:var(--fm);font-size:2rem;color:var(--gold);text-shadow:0 0 18px rgba(255,215,0,0.5)}
+.cst-l{font-size:.56rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.cst-sep{width:1px;height:36px;background:linear-gradient(to bottom,transparent,rgba(255,215,0,0.3),transparent)}
+.champ-quote{font-size:.84rem;color:var(--muted);font-style:italic;letter-spacing:.5px;max-width:380px;margin:0 auto}
+.runner-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:680px;margin:34px auto 0}
+.runner-card{border-radius:18px;padding:24px 18px;text-align:center;position:relative;overflow:hidden}
+.runner-card.silver{background:linear-gradient(160deg,rgba(200,210,220,0.08),rgba(5,14,5,0.8));border:1px solid rgba(200,210,220,0.28)}
+.runner-card.bronze{background:linear-gradient(160deg,rgba(205,140,80,0.09),rgba(5,14,5,0.8));border:1px solid rgba(205,140,80,0.3)}
+.runner-medal{font-size:1.9rem;margin-bottom:6px}
+.runner-name{font-family:var(--fd);font-size:1.6rem;letter-spacing:2px;color:var(--white);margin-bottom:2px}
+.runner-pts{font-family:var(--fm);font-size:1.3rem;margin-bottom:8px}
+.runner-card.silver .runner-pts{color:#d6e3ec}
+.runner-card.bronze .runner-pts{color:#e0a36a}
+.runner-meta{font-size:.66rem;color:var(--muted);letter-spacing:1px}
+/* FINAL H2H */
+.fh2h-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:980px;margin:0 auto}
+.fh2h-card{position:relative;padding:26px 18px;border-radius:18px;text-align:center;
+  background:linear-gradient(160deg,rgba(0,255,136,0.05),rgba(3,10,4,0.85));border:1px solid rgba(0,255,136,0.15);
+  transition:transform .3s,border-color .3s}
+.fh2h-card:hover{transform:translateY(-5px);border-color:rgba(255,215,0,0.4)}
+.fh2h-vs{font-family:var(--fm);font-size:.62rem;letter-spacing:2px;color:var(--muted);margin-bottom:12px}
+.fh2h-score{font-family:var(--fm);font-size:2.1rem;color:var(--gold);text-shadow:0 0 16px rgba(255,215,0,0.35);margin-bottom:10px}
+.fh2h-lead{font-size:.72rem;color:var(--neon);letter-spacing:1px;font-weight:600}
+/* CLOSING */
+.closing-sec{max-width:760px;margin:0 auto;padding:60px 22px;text-align:center}
+.closing-card{padding:40px 30px;border-radius:22px;background:linear-gradient(160deg,rgba(255,215,0,0.05),rgba(5,14,5,0.85));
+  border:1px solid rgba(255,215,0,0.2)}
+.closing-icon{font-size:2.2rem;margin-bottom:14px}
+.closing-title{font-family:var(--fd);font-size:clamp(1.8rem,4.5vw,2.4rem);letter-spacing:3px;color:var(--white);margin-bottom:16px}
+.closing-text{font-size:.92rem;line-height:1.7;color:var(--muted)}
+.closing-text strong{color:var(--gold)}
+@media(max-width:700px){.runner-wrap{grid-template-columns:1fr}.fh2h-grid{grid-template-columns:1fr}}
 /* GALLERY */
 .gallery-strip{padding:10px 20px 70px;max-width:1100px;margin:0 auto}
 .gallery-head{text-align:center;padding-bottom:30px}
@@ -364,7 +441,7 @@ nav,.hero,.sec,.footer,.gallery-strip,.photo-divider{position:relative;z-index:1
 <nav class="nav">
   <a href="#top" class="nav-logo"><div class="nav-ball">🎱</div>WADAU LEAGUE</a>
   <div class="nav-links">
-    <a href="#gallery">Gallery</a><a href="#standings">Standings</a>
+    <a href="#champion">Champion</a><a href="#gallery">Gallery</a><a href="#standings">Standings</a>
     <a href="#results">Results</a><a href="#players">Players</a><a href="#stats">Stats</a>
   </div>
 </nav>
@@ -372,26 +449,109 @@ nav,.hero,.sec,.footer,.gallery-strip,.photo-divider{position:relative;z-index:1
 <!-- HERO -->
 <section class="hero" id="top">
   <div style="max-width:700px;width:100%;position:relative;z-index:1">
-    <div class="h-season">🎱 SEASON 02 · DAY 4 DONE</div>
+    <div class="h-season">🏆 SEASON 02 · TOURNAMENT COMPLETE</div>
     <div class="hero-graphic">
       <div class="hero-ring hr1"></div><div class="hero-ring hr2"></div><div class="hero-ring hr3"></div>
       <div class="hero-8ball"><div class="ball-circle">8</div></div>
     </div>
     <h1><span class="h-t1">WADAU POOL</span><span class="h-t2">MINI LEAGUE</span></h1>
-    <p class="h-tag">1 Month Battle of Precision, Skill &amp; Bragging Rights · Nairobi</p>
-    <div class="day-badge">🔥 Day 4 — Kim leads on Win% · Simon on a comeback!</div>
+    <p class="h-tag">One Month of Competitive Pool — Final Results · Nairobi</p>
+    <div class="day-badge">👑 Kim is the Official Champion — Final Standings Locked In</div>
     <div class="h-counters">
       <div class="hc"><span class="hc-n">3</span><span class="hc-l">Players</span></div>
       <div class="hc-sep"></div>
-      <div class="hc"><span class="hc-n">208</span><span class="hc-l">Frames</span></div>
+      <div class="hc"><span class="hc-n">138</span><span class="hc-l">Frames</span></div>
       <div class="hc-sep"></div>
-      <div class="hc"><span class="hc-n">96</span><span class="hc-l">Total Wins</span></div>
+      <div class="hc"><span class="hc-n">Kim</span><span class="hc-l">Champion</span></div>
       <div class="hc-sep"></div>
-      <div class="hc"><span class="hc-n">114</span><span class="hc-l">Top Pts</span></div>
+      <div class="hc"><span class="hc-n">162</span><span class="hc-l">Top Pts</span></div>
     </div>
-    <a href="#standings" class="view-btn">VIEW STANDINGS <span class="vba">↓</span></a>
+    <a href="#champion" class="view-btn">SEE THE CHAMPION <span class="vba">↓</span></a>
   </div>
   <div class="scroll-hint">SCROLL DOWN</div>
+</section>
+
+<!-- CHAMPION -->
+<section class="champ-sec rv" id="champion">
+  <div class="champ-pill">🏆 2026 CHAMPION</div>
+  <h2 class="champ-title">TOURNAMENT COMPLETE</h2>
+  <p class="champ-sub">Champion of the One-Month Pool Tournament</p>
+  <div class="champ-card">
+    <div class="champ-sparkles">
+      <span class="spark">✨</span><span class="spark">⭐</span><span class="spark">✨</span>
+      <span class="spark">⭐</span><span class="spark">✨</span><span class="spark">⭐</span>
+    </div>
+    <span class="champ-crown">👑</span>
+    <span class="champ-trophy">🏆</span>
+    <div class="champ-badge-row">
+      <span class="champ-badge b1">OFFICIAL CHAMPION</span>
+      <span class="champ-badge b2">MVP</span>
+    </div>
+    <div class="champ-name">KIM</div>
+    <div class="champ-role">The Sharp Shooter · Winner of the One-Month Pool Tournament</div>
+    <div class="champ-stats">
+      <div class="cst"><span class="cst-n">162</span><span class="cst-l">Points</span></div>
+      <div class="cst-sep"></div>
+      <div class="cst"><span class="cst-n">62.1%</span><span class="cst-l">Win Rate</span></div>
+      <div class="cst-sep"></div>
+      <div class="cst"><span class="cst-n">54</span><span class="cst-l">Wins</span></div>
+    </div>
+    <p class="champ-quote">"After a month of competitive pool, Kim claimed the crown — the undisputed Champion of Wadau Pool Mini League."</p>
+    <div class="champ-8ball"><span>8</span></div>
+  </div>
+
+  <div class="runner-wrap">
+    <div class="runner-card silver">
+      <div class="runner-medal">🥈</div>
+      <div class="runner-name">Henry</div>
+      <div class="runner-pts">132 PTS</div>
+      <div class="runner-meta">44 W · 54 L · 44.9% Win Rate</div>
+    </div>
+    <div class="runner-card bronze">
+      <div class="runner-medal">🥉</div>
+      <div class="runner-name">Simon</div>
+      <div class="runner-pts">120 PTS</div>
+      <div class="runner-meta">40 W · 51 L · 44.0% Win Rate</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL HEAD TO HEAD -->
+<section class="sec rv">
+  <div class="sec-head">
+    <div class="sec-pill">⚔️ FINAL RECORDS</div>
+    <h2 class="sec-title">FINAL HEAD-TO-HEAD RESULTS</h2>
+    <p class="sec-sub">How every rivalry finished, after one month of matches</p>
+    <div class="divider"></div>
+  </div>
+  <div class="fh2h-grid">
+    <div class="fh2h-card rv">
+      <div class="fh2h-vs">KIM vs HENRY</div>
+      <div class="fh2h-score">27 – 20</div>
+      <div class="fh2h-lead">👑 Kim leads</div>
+    </div>
+    <div class="fh2h-card rv">
+      <div class="fh2h-vs">KIM vs SIMON</div>
+      <div class="fh2h-score">27 – 15</div>
+      <div class="fh2h-lead">👑 Kim leads</div>
+    </div>
+    <div class="fh2h-card rv">
+      <div class="fh2h-vs">HENRY vs SIMON</div>
+      <div class="fh2h-score">24 – 29</div>
+      <div class="fh2h-lead">🔥 Simon leads</div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing-sec rv">
+  <div class="closing-card">
+    <div class="closing-icon">🎱🏆🎱</div>
+    <h3 class="closing-title">TOURNAMENT COMPLETE</h3>
+    <p class="closing-text">After one month of competitive pool matches, the tournament has officially concluded.
+      Congratulations to <strong>Kim</strong> for an outstanding performance throughout the competition.
+      Thanks to <strong>Henry</strong> and <strong>Simon</strong> for making the tournament exciting from start to finish.</p>
+  </div>
 </section>
 
 <!-- GALLERY -->
@@ -420,9 +580,9 @@ nav,.hero,.sec,.footer,.gallery-strip,.photo-divider{position:relative;z-index:1
 <!-- STANDINGS -->
 <section class="sec rv" id="standings">
   <div class="sec-head">
-    <div class="sec-pill">LIVE TABLE · DAY 4</div>
-    <h2 class="sec-title">STANDINGS</h2>
-    <p class="sec-sub">Updated after Day 4 — 3 matches played today</p>
+    <div class="sec-pill">FINAL TABLE</div>
+    <h2 class="sec-title">FINAL STANDINGS</h2>
+    <p class="sec-sub">Official results — Tournament Complete</p>
     <div class="divider"></div>
   </div>
   <div class="pts-explainer">
@@ -450,91 +610,86 @@ nav,.hero,.sec,.footer,.gallery-strip,.photo-divider{position:relative;z-index:1
         </tr>
       </thead>
       <tbody>
-        <!-- KIM: P=66 W=38 L=28 Win%=57.6% Pts=114 — 1st by tiebreaker -->
+        <!-- KIM: P=87 W=54 L=33 Win%=62.1% Pts=162 — CHAMPION -->
         <tr class="p1">
           <td><span class="medal m1">🥇</span></td>
           <td><div class="nc">
             <div class="ball-av" style="background:radial-gradient(circle at 38% 33%,#ffe566,#a87800)">K</div>
-            <div><span class="pname">Kim</span><span class="prole">The Sharp Shooter</span></div>
+            <div><span class="pname">Kim</span><span class="prole">Champion · The Sharp Shooter</span></div>
           </div></td>
-          <td>66</td>
-          <td style="color:var(--neon);font-weight:700">38</td>
-          <td style="color:var(--red)">28</td>
+          <td>87</td>
+          <td style="color:var(--neon);font-weight:700">54</td>
+          <td style="color:var(--red)">33</td>
           <td><div class="wpct-wrap">
-            <span class="wpct-num" style="color:var(--gold)">57.6%</span>
-            <div class="wpct-bar"><div class="wpct-fill" style="width:57.6%;background:var(--gold)"></div></div>
+            <span class="wpct-num" style="color:var(--gold)">62.1%</span>
+            <div class="wpct-bar"><div class="wpct-fill" style="width:62.1%;background:var(--gold)"></div></div>
           </div></td>
-          <td><span class="pts-val">114</span></td>
+          <td><span class="pts-val">162</span></td>
         </tr>
-        <!-- HENRY: P=74 W=38 L=36 Win%=51.4% Pts=114 — 2nd by tiebreaker -->
+        <!-- HENRY: P=98 W=44 L=54 Win%=44.9% Pts=132 -->
         <tr class="p2">
           <td><span class="medal m2">🥈</span></td>
           <td><div class="nc">
             <div class="ball-av" style="background:radial-gradient(circle at 38% 33%,#44eeff,#006699)">H</div>
             <div><span class="pname">Henry</span><span class="prole">The Comeback Kid</span></div>
           </div></td>
-          <td>74</td>
-          <td style="color:var(--neon);font-weight:700">38</td>
-          <td style="color:var(--red)">36</td>
+          <td>98</td>
+          <td style="color:var(--neon);font-weight:700">44</td>
+          <td style="color:var(--red)">54</td>
           <td><div class="wpct-wrap">
-            <span class="wpct-num" style="color:var(--cyan)">51.4%</span>
-            <div class="wpct-bar"><div class="wpct-fill" style="width:51.4%;background:var(--cyan)"></div></div>
+            <span class="wpct-num" style="color:var(--cyan)">44.9%</span>
+            <div class="wpct-bar"><div class="wpct-fill" style="width:44.9%;background:var(--cyan)"></div></div>
           </div></td>
-          <td><span class="pts-val">114</span></td>
+          <td><span class="pts-val">132</span></td>
         </tr>
-        <!-- SIMON: P=68 W=28 L=40 Win%=41.2% Pts=84 -->
+        <!-- SIMON: P=91 W=40 L=51 Win%=44.0% Pts=120 -->
         <tr class="p3">
           <td><span class="medal m3">🥉</span></td>
           <td><div class="nc">
             <div class="ball-av" style="background:radial-gradient(circle at 38% 33%,#ff9966,#bb2200)">S</div>
             <div><span class="pname">Simon</span><span class="prole">The Cue Master</span></div>
           </div></td>
-          <td>68</td>
-          <td style="color:var(--neon);font-weight:700">28</td>
-          <td style="color:var(--red)">40</td>
+          <td>91</td>
+          <td style="color:var(--neon);font-weight:700">40</td>
+          <td style="color:var(--red)">51</td>
           <td><div class="wpct-wrap">
-            <span class="wpct-num" style="color:var(--orange)">41.2%</span>
-            <div class="wpct-bar"><div class="wpct-fill" style="width:41.2%;background:var(--orange)"></div></div>
+            <span class="wpct-num" style="color:var(--orange)">44.0%</span>
+            <div class="wpct-bar"><div class="wpct-fill" style="width:44.0%;background:var(--orange)"></div></div>
           </div></td>
-          <td><span class="pts-val">84</span></td>
+          <td><span class="pts-val">120</span></td>
         </tr>
       </tbody>
     </table>
   </div>
-  <div class="tie-note">🔵 Kim &amp; Henry both on <strong>114 pts</strong> — Kim leads by Win% (57.6% vs 51.4%)</div>
+  <div class="tie-note">👑 <strong>Kim is the official Champion</strong> with 162 points and a 62.1% win rate — the highest of the tournament</div>
 
   <!-- H2H -->
   <div class="h2h-wrap rv">
-    <div class="h2h-label">⚔️ Head-to-Head Records</div>
+    <div class="h2h-label">⚔️ Final Head-to-Head Records</div>
     <div class="h2h-grid">
-      <!-- Kim vs Henry: 15-13 → Kim+3 Henry+5 = 18-18 DEAD EVEN -->
-      <div class="h2h-card dead-even">
+      <div class="h2h-card">
         <div class="h2h-matchup">Kim vs Henry</div>
         <div class="h2h-scores">
-          <span class="h2h-even">18</span><span class="h2h-sep">–</span><span class="h2h-even">18</span>
+          <span class="h2h-w">27</span><span class="h2h-sep">–</span><span class="h2h-l">20</span>
         </div>
-        <div class="h2h-names"><span style="color:var(--gold)">Kim</span><span style="color:var(--cyan)">Henry</span></div>
-        <div class="h2h-badge">🔥 DEAD EVEN</div>
+        <div class="h2h-names"><span style="color:var(--gold)">Kim 🏆</span><span style="color:var(--cyan)">Henry</span></div>
       </div>
-      <!-- Kim vs Simon: 15-11 → Kim+5 Simon+1 = 20-12 -->
       <div class="h2h-card">
         <div class="h2h-matchup">Kim vs Simon</div>
         <div class="h2h-scores">
-          <span class="h2h-w">20</span><span class="h2h-sep">–</span><span class="h2h-l">12</span>
+          <span class="h2h-w">27</span><span class="h2h-sep">–</span><span class="h2h-l">15</span>
         </div>
         <div class="h2h-names"><span style="color:var(--gold)">Kim 🏆</span><span style="color:var(--muted)">Simon</span></div>
       </div>
-      <!-- Henry vs Simon: 17-16 → Henry+3 Simon+4 = 20-20 DEAD EVEN -->
-      <div class="h2h-card dead-even">
+      <div class="h2h-card">
         <div class="h2h-matchup">Henry vs Simon</div>
         <div class="h2h-scores">
-          <span class="h2h-even">20</span><span class="h2h-sep">–</span><span class="h2h-even">20</span>
+          <span class="h2h-l">24</span><span class="h2h-sep">–</span><span class="h2h-w">29</span>
         </div>
-        <div class="h2h-names"><span style="color:var(--cyan)">Henry</span><span style="color:var(--orange)">Simon</span></div>
-        <div class="h2h-badge">🔥 DEAD EVEN</div>
+        <div class="h2h-names"><span style="color:var(--cyan)">Henry</span><span style="color:var(--orange)">Simon 🏆</span></div>
       </div>
     </div>
-    <div class="fire-note">🔥 Kim vs Henry <strong>18–18</strong> · Henry vs Simon <strong>20–20</strong> — two rivalries perfectly level!</div>
+    <div class="fire-note">🔵 Kim swept both rivalries · Simon edged Henry 29–24 in their head-to-head series</div>
   </div>
 </section>
 
@@ -752,20 +907,20 @@ nav,.hero,.sec,.footer,.gallery-strip,.photo-divider{position:relative;z-index:1
       </div>
       <div class="pc-name">Kim</div>
       <div class="pc-role">The Sharp Shooter</div>
-      <div class="pc-rank">🥇 1st — Win% Tiebreaker</div>
-      <div class="pc-pts"><span class="pc-pts-n">114</span><span class="pc-pts-l">PTS</span></div>
+      <div class="pc-rank">🥇 Official Champion</div>
+      <div class="pc-pts"><span class="pc-pts-n">162</span><span class="pc-pts-l">PTS</span></div>
       <div class="pc-grid">
-        <div class="pcs"><span class="pcs-n" style="color:var(--neon)">38</span><span class="pcs-l">Wins</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--red)">28</span><span class="pcs-l">Losses</span></div>
-        <div class="pcs"><span class="pcs-n">66</span><span class="pcs-l">Played</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--gold)">57.6%</span><span class="pcs-l">Win Rate</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--neon)">54</span><span class="pcs-l">Wins</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--red)">33</span><span class="pcs-l">Losses</span></div>
+        <div class="pcs"><span class="pcs-n">87</span><span class="pcs-l">Played</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--gold)">62.1%</span><span class="pcs-l">Win Rate</span></div>
       </div>
       <div class="pc-bar">
         <span class="pb-lbl">Win%</span>
-        <div class="pb-track"><div class="pb-fill" style="width:57.6%;background:var(--gold)"></div></div>
-        <span class="pb-pct" style="color:var(--gold)">57.6%</span>
+        <div class="pb-track"><div class="pb-fill" style="width:62.1%;background:var(--gold)"></div></div>
+        <span class="pb-pct" style="color:var(--gold)">62.1%</span>
       </div>
-      <div class="pc-chips"><span class="chip cw">38 W</span><span class="chip cl">28 L</span></div>
+      <div class="pc-chips"><span class="chip cw">54 W</span><span class="chip cl">33 L</span></div>
     </div>
     <div class="pcard silver rv">
       <div class="pcard-glow"></div>
@@ -773,20 +928,20 @@ nav,.hero,.sec,.footer,.gallery-strip,.photo-divider{position:relative;z-index:1
       <div class="pc-av" style="background:radial-gradient(circle at 35% 28%,#55eeff,#005588)">H</div>
       <div class="pc-name">Henry</div>
       <div class="pc-role">The Comeback Kid</div>
-      <div class="pc-rank">🥈 2nd — Win% Tiebreaker</div>
-      <div class="pc-pts"><span class="pc-pts-n">114</span><span class="pc-pts-l">PTS</span></div>
+      <div class="pc-rank">🥈 Runner-Up</div>
+      <div class="pc-pts"><span class="pc-pts-n">132</span><span class="pc-pts-l">PTS</span></div>
       <div class="pc-grid">
-        <div class="pcs"><span class="pcs-n" style="color:var(--neon)">38</span><span class="pcs-l">Wins</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--red)">36</span><span class="pcs-l">Losses</span></div>
-        <div class="pcs"><span class="pcs-n">74</span><span class="pcs-l">Played</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--cyan)">51.4%</span><span class="pcs-l">Win Rate</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--neon)">44</span><span class="pcs-l">Wins</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--red)">54</span><span class="pcs-l">Losses</span></div>
+        <div class="pcs"><span class="pcs-n">98</span><span class="pcs-l">Played</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--cyan)">44.9%</span><span class="pcs-l">Win Rate</span></div>
       </div>
       <div class="pc-bar">
         <span class="pb-lbl">Win%</span>
-        <div class="pb-track"><div class="pb-fill" style="width:51.4%;background:var(--cyan)"></div></div>
-        <span class="pb-pct" style="color:var(--cyan)">51.4%</span>
+        <div class="pb-track"><div class="pb-fill" style="width:44.9%;background:var(--cyan)"></div></div>
+        <span class="pb-pct" style="color:var(--cyan)">44.9%</span>
       </div>
-      <div class="pc-chips"><span class="chip cw">38 W</span><span class="chip cl">36 L</span></div>
+      <div class="pc-chips"><span class="chip cw">44 W</span><span class="chip cl">54 L</span></div>
     </div>
     <div class="pcard bronze rv">
       <div class="pcard-glow"></div>
@@ -795,19 +950,19 @@ nav,.hero,.sec,.footer,.gallery-strip,.photo-divider{position:relative;z-index:1
       <div class="pc-name">Simon</div>
       <div class="pc-role">The Cue Master</div>
       <div class="pc-rank">🥉 3rd Place</div>
-      <div class="pc-pts"><span class="pc-pts-n">84</span><span class="pc-pts-l">PTS</span></div>
+      <div class="pc-pts"><span class="pc-pts-n">120</span><span class="pc-pts-l">PTS</span></div>
       <div class="pc-grid">
-        <div class="pcs"><span class="pcs-n" style="color:var(--neon)">28</span><span class="pcs-l">Wins</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--red)">40</span><span class="pcs-l">Losses</span></div>
-        <div class="pcs"><span class="pcs-n">68</span><span class="pcs-l">Played</span></div>
-        <div class="pcs"><span class="pcs-n" style="color:var(--orange)">41.2%</span><span class="pcs-l">Win Rate</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--neon)">40</span><span class="pcs-l">Wins</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--red)">51</span><span class="pcs-l">Losses</span></div>
+        <div class="pcs"><span class="pcs-n">91</span><span class="pcs-l">Played</span></div>
+        <div class="pcs"><span class="pcs-n" style="color:var(--orange)">44.0%</span><span class="pcs-l">Win Rate</span></div>
       </div>
       <div class="pc-bar">
         <span class="pb-lbl">Win%</span>
-        <div class="pb-track"><div class="pb-fill" style="width:41.2%;background:var(--orange)"></div></div>
-        <span class="pb-pct" style="color:var(--orange)">41.2%</span>
+        <div class="pb-track"><div class="pb-fill" style="width:44.0%;background:var(--orange)"></div></div>
+        <span class="pb-pct" style="color:var(--orange)">44.0%</span>
       </div>
-      <div class="pc-chips"><span class="chip cw">28 W</span><span class="chip cl">40 L</span></div>
+      <div class="pc-chips"><span class="chip cw">40 W</span><span class="chip cl">51 L</span></div>
     </div>
   </div>
 </section>
@@ -817,7 +972,7 @@ nav,.hero,.sec,.footer,.gallery-strip,.photo-divider{position:relative;z-index:1
   <div class="sec-head">
     <div class="sec-pill">ANALYTICS</div>
     <h2 class="sec-title">STATS &amp; CHARTS</h2>
-    <p class="sec-sub">Visual breakdown — Day 4 updated</p>
+    <p class="sec-sub">Final visual breakdown — Tournament complete</p>
     <div class="divider"></div>
   </div>
   <div class="ch2">
@@ -830,16 +985,17 @@ nav,.hero,.sec,.footer,.gallery-strip,.photo-divider{position:relative;z-index:1
     <div class="cbox rv"><div class="clbl">Points Share</div><div class="ci"><canvas id="chartDist"></canvas></div></div>
   </div>
   <div class="cstrip">
-    <div class="cstr rv"><span class="cstr-icon">🎱</span><span class="cstr-n">208</span><span class="cstr-l">Total Frames</span></div>
-    <div class="cstr rv"><span class="cstr-icon">🏆</span><span class="cstr-n">104</span><span class="cstr-l">Total Wins</span></div>
-    <div class="cstr rv"><span class="cstr-icon">👑</span><span class="cstr-n">Kim</span><span class="cstr-l">1st · Win%</span></div>
-    <div class="cstr rv"><span class="cstr-icon">⚡</span><span class="cstr-n">114</span><span class="cstr-l">Joint Top Pts</span></div>
+    <div class="cstr rv"><span class="cstr-icon">🎱</span><span class="cstr-n">138</span><span class="cstr-l">Total Frames</span></div>
+    <div class="cstr rv"><span class="cstr-icon">🏆</span><span class="cstr-n">Kim</span><span class="cstr-l">Champion</span></div>
+    <div class="cstr rv"><span class="cstr-icon">👑</span><span class="cstr-n">62.1%</span><span class="cstr-l">Champion Win%</span></div>
+    <div class="cstr rv"><span class="cstr-icon">⚡</span><span class="cstr-n">162</span><span class="cstr-l">Champion Pts</span></div>
   </div>
 </section>
 
 <footer class="footer">
-  <span class="footer-ball">🎱</span>
-  <p class="footer-name">Powered by <strong>Wadau League</strong> · Season 02</p>
+  <span class="footer-ball">🏆</span>
+  <p class="footer-name">KIM — OFFICIAL CHAMPION OF THE ONE-MONTH POOL TOURNAMENT</p>
+  <p class="footer-url">Kim 162 PTS · Henry 132 PTS · Simon 120 PTS</p>
   <p class="footer-url">wadau-mini-league.vercel.app</p>
 </footer>
 
@@ -917,7 +1073,7 @@ document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 
 const PLAYERS=['Kim','Henry','Simon'];
 const CPLS=['#ffd700','#00d4ff','#ff6b35'];
-const PTS=[114,114,84],WINS=[38,38,28],LOSSES=[28,36,40],PLAYED=[66,74,68],WP=[57.6,51.4,41.2];
+const PTS=[162,132,120],WINS=[54,44,40],LOSSES=[33,54,51],PLAYED=[87,98,91],WP=[62.1,44.9,44.0];
 const TT={backgroundColor:'rgba(2,8,3,0.95)',borderColor:'rgba(0,255,136,0.18)',borderWidth:1,
   bodyFont:{family:'Orbitron',size:11},titleFont:{family:'Orbitron',size:11},padding:10};
 const TICK={color:'rgba(240,255,244,0.38)',font:{family:'Rajdhani',size:11}};
